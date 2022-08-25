@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.item1 { grid-area: P1; }
+.item2 { grid-area: P2; }
+.item3 { grid-area: P3; }
+.item4 { grid-area: P4; }
+.item5 { grid-area: P5; }
+.item6 { grid-area: P6; }
+.item7 { grid-area: P7; }
+
+.grid-container {
+  display: grid;
+  grid-template:
+    'P1 P2 P3 P7'
+    'P4 P5 P6 P7';
+  grid-gap: 5px;
+  padding: 5px;
+  background-color: black;
+}
+
+.grid-container > div {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  height: 300px;
+  border-color: black;
+}
+
+
+.printerpic {
+  width: 200px;
+  height: 180px;
+  float: right;
+}
+
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+.collapsible {
+  background-color: rgb(196, 190, 190);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 36.5%;
+  height: 30px;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  background-color: rgba(156, 154, 154, 0.708);
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: white;
+}
+
+div.ex1 {
+  border-style: solid;
+  border-color: white black black white;
+}
+
+div.ex2 {
+  border-style: solid;
+  border-color: black white black black;
+}
+
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item1"> 
+    <p style="text-align: left;">Timer</p>
+    <img src="PRUSA.jpg" alt="PRUSA" class="printerpic">
+
+    <div class="ex1">Nemy</div>
+    <div class="ex2">Name</div>
+
+
+  </div>
+
+  <div class="item2">PRUSA
+        <img src="PRUSA.jpg" alt="PRUSA" class="printerpic">
+  </div>
+
+  <div class="item3">Craftbot
+    <img src="craftbot-mini.jpg" alt="Craftbot" class="printerpic">
+  </div>  
+
+  <div class="item4">Craftbot
+        <img src="craftbot-mini.jpg" alt="Craftbot" class="printerpic">
+  </div>
+
+  <div class="item5">3d-Printer</div>
+  <div class="item6">3d-Printer</div>
+  <div class="item7">Waitinglist
+    <table class="center">
+        <tr>
+            <th>1.</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Name</td>
+        </tr>
+    </table>
+
+    <button type="button" class="collapsible" style="text-align: center; font-size: 30px;">...</button>
+    <div class="content">
+        <table class="center">
+            <tr>
+                <td>4.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+              <td>7.</td>
+              <td>Name</td>
+          </tr>
+          <tr>
+              <td>8.</td>
+              <td>Name</td>
+          </tr>
+          <tr>
+              <td>9.</td>
+              <td>Name</td>
+          </tr>
+          <tr>
+            <td>10.</td>
+            <td>Name</td>
+        </tr>
+        </table>
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
+
+
+</body>
+</html>
+
