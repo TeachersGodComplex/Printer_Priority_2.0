@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.flex-container_1 {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.flex-container_2 {
+display: flex;
+flex-direction: row;
+background-color: white;
+}
+
+.flex-container_1 > div {
+background-color: #f1f1f1;
+width: 70%;;
+text-align: center;
+margin-top: 10px;
+}
+
+.flex-container_2 > div {
+background-color: #f1f1f1;
+width: 30%;;
+text-align: center;
+margin-bottom: 10px;
+}
+
+
+
+/* Columns and Rows */
+* {
+  box-sizing: border-box;
+}
+
+body {
+/*
+Text typen
+*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+Skapar tre columner sida vid sida
+*/
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+/* Style för cards, bilder och knapp */
+.card {
+  box-shadow: 10px 8px 10px 5px rgba(0, 0, 0, 0.329);
+  transition: 0.6s;
+  text-align: left;
+  border-radius: 5px 5px 5px 5px; /*Ger avrundade hörn*/
+  background-color: rgba(0, 0, 0, 0.808);
+}
+
+.card:hover {
+/*
+Hur skuggan ändras när musen dras över ett card
+*/
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.responsive {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 4350px;
+}
+
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+.collapsible {
+  background-color: rgb(196, 190, 190);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 30%;
+  height: 30px;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  background-color: rgba(156, 154, 154, 0.708);
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: white;
+}
+</style>
+</head>
+
+<body>
+<div class="row"> 
+    <div class="column">
+        <div class="card">
+        <img src="PRUSA.jpg" alt="Founders edition" class="responsive" style="border-radius: 8px 8px 0 0;">
+
+        <p>Timer</p>
+        <p>Nemy</p>
+        <p>Name</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+        <img src="PRUSA.jpg" alt="Founders edition" class="responsive" style="border-radius: 8px 8px 0 0;">
+    
+        <p>Timer</p>
+        <p>Tomda</p>
+        <p>Name<p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+        <img src="craftbot-mini.jpg" alt="Founders edition" class="responsive" style="border-radius: 8px 8px 0 0;">
+    
+        <p>Timer</p>
+        <p>...</p>
+        <p>Name</p> 
+        </div>
+    </div>
+
+
+
+    <div class="column">
+        <div class="card">
+        <table class="center">
+            <tr>
+                <th>1.</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Name</td>
+            </tr>
+        </table>
+
+        <button type="button" class="collapsible" style="text-align: center; font-size: 30px;">...</button>
+        <div class="content">
+            <table class="center">
+                <tr>
+                    <td>4.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                <td>7.</td>
+                <td>Name</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>10.</td>
+                    <td>Name</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+
+</html>
