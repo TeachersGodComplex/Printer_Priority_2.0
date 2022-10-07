@@ -1,130 +1,168 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-
 <style>
-/* Navbar */
-.top {
-  background: rgba(0, 0, 0, 0.767);
-  position: sticky; /*För att den ska följa med när man skrollar på sidan*/
-  top: 0;
-}
-.space {
-  padding-top: 0;
-  color: rgba(58, 53, 53, 0.452); /*Den är något genomskinlig på grund av dessa inställningar*/
-  padding: 60px;
-}
-.logo {
-  width: 128px;
-  height: 120px;
-  float: left;
-}
-
-
-/* Searching bar */
-* {box-sizing: border-box;}
-
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.topnav {
-  overflow: hidden;
-  background-color: rgba(25, 26, 34, 0.918);
 }
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 
-.topnav input[type=text] {
-float: right;
-padding: 6px;
-margin-top: 8px;
-margin-right: 16px;
-margin-bottom: 5px;
-border: none;
-font-size: 20px;
+table, th, td {
+  border: 2px solid black;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: large;
 }
 
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
+table.center {
+  margin-left: 0; 
+  margin-right: 0;
+  width: 100%;
+}
+
+.collapsible {
+  background-color: rgb(196, 190, 190);
+  color: rgb(255, 255, 255);
   cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  text-align: center;
+  font-size: x-large;
 }
 
-.topnav .search-container button:hover {
-  background: #ccc;
+.active, .collapsible:hover {
+  background-color: rgba(156, 154, 154, 0.708);
 }
 
-/*Responsiv*/
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text],
-.topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
-  }
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  text-align: left;
+  font-size: large;
 }
-
-
-
-.rubrik {
-  padding: 0 3%;
-}
-
-
 </style>
+</head>
 
 <body>
-<div class="top">
-  <img src="Shroom studios profile picture.png" class="logo">
-  <div class="space">
-  </div> 
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#Waitinglist">Waitinglist</a></li>
+  <li><a href="#Prusa">Prusa</a></li>
+  <li><a href="#Craftbot-mini">Craftbot-mini</a></li>
+  <li><a href="#Craftbot">Craftbot</a></li>
+</ul>
 
-    <div class="topnav"> 
-      <a href="#About us">About us</a>
-      <a href="#certificate">certificate</a>
-      <a href="#Customize designs">Customize designs</a>
-      <a href="#UF">UF</a>
-      <a href="#Contact">Contact</a>
-        <div class="search-container">
-          <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-        </div>
-      </div>
-</div>  
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h1>Printer_Priority</h1>
+</div>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+  <h2 id="Waitinglist">Waitinglist</h2>
+  <table class="center">
+    <tr>
+        <th>1.</th>
+        <th>Name</th>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td>Name</td>
+    </tr>
+  </table>
+  <button type="button" class="collapsible">...</button>
+    <div class="content">
+        <table class="center">
+            <tr>
+                <td>4.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+            <td>7.</td>
+            <td>Name</td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>Name</td>
+            </tr>
+            <tr>
+            <td>4.</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+        <td>7.</td>
+        <td>Name</td>
+        </tr>
+        </table>
+    </div>
+</div>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h2 id="Prusa">Prusa</h2>
+    
+</div>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h2 id="Craftbot-mini">Craftbot-mini</h2>
+    <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+
+    <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+</div>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h2 id="Craftbot">Craftbot</h2>
+</div>
 </body>
 </html>
+
 

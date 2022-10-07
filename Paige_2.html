@@ -46,8 +46,10 @@ body {
   display: grid;
   grid-template-areas:
   'header header header header header header'
-  'menu main main main right right'
-  'menu footer footer footer footer footer';
+  'menu menu menu menu menu menu'
+  'main main main main main main'
+  'right right right right right right'
+  'footer footer footer footer footer footer';
   grid-gap: 10px;
   background-color: gray;
   padding: 10px;
@@ -59,22 +61,215 @@ body {
   padding: 20px 0;
   font-size: 30px;
 }
+
+/* 
+För att della upp en grid "rad" i två skapar jag två containers bredvidvarandra 
+och sätter in bilder och text
+*/
+.flex-container_1 {
+display: flex;
+flex-direction: row;
+}
+.flex-container_2 {
+display: flex;
+flex-direction: row;
+}
+
+.flex-container_1 > div {
+width: 50%;
+text-align: center;
+margin-top: 10px;
+}
+
+.flex-container_2 > div {
+width: 50%;
+text-align: center;
+margin-bottom: 10px;
+}
+
+
+table, th, td {
+border: 2px solid black;
+text-align: left;
+border-collapse: collapse;
+font-size: large;
+}
+
+table.center {
+margin-left: 0; 
+margin-right: 0;
+width: 100%;
+}
+
+.collapsible {
+background-color: rgb(196, 190, 190);
+color: rgb(255, 255, 255);
+cursor: pointer;
+padding: 10px;
+width: 100%;
+outline: none;
+text-align: center;
+font-size: x-large;
+}
+
+.active, .collapsible:hover {
+background-color: rgba(156, 154, 154, 0.708);
+}
+
+.content {
+display: none;
+overflow: hidden;
+background-color: white;
+text-align: left;
+font-size: large;
+}
+
+button {
+border: solid;
+border-radius: 5px 5px 5px 5px; 
+outline: 3px;
+padding: 15px;
+margin-bottom: 15px;
+color: white;
+background-color: #000;
+text-align: center;
+width: 100%; /*95% av cardets bredd*/
+font-size: 20px;
+}
+
+button:hover {
+opacity: 0.7;
+}
+  
+/*
+Länken är texten "Info" och ska vara vit och inte vara understruken,
+alltså inte se ut som en länk
+*/
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
 </style>
 </head>
 <body>
 <div class="top">
     <div class="topnav"> 
         <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Navbar.html">First paige</a>
-        <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_1.html"">Paige_1</a>
+        <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_1.html">Paige_1</a>
         <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_3.html">Paige_3</a>
     </div>
 </div>  
 
 <div class="grid-container">
-  <div class="item1">Header</div>
-  <div class="item2">Menu</div>
-  <div class="item3">Main</div>  
-  <div class="item4">Right</div>
+  <div class="item1">
+    <h2>Printer_Priority</h2>
+  </div>
+
+  <div class="item2">
+    <div class="flex-container_1">
+        <div>
+        <h3>Prusa_Nemy</h3>
+        <h5>Free to use</h5>
+        <p style="padding-left: 19px;"><button><a href="">Add print</a></button></p>
+        </div>
+        <div>
+        <h3>Prusa_Tomda</h3>
+        <p style="padding-left: 19px;"><button><a href="">Info</a></button></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="item3">
+    <div class="flex-container_2">
+        <div>
+        <h3>Craftbot-mini</h3>
+        <p><button><a href="">Info</a></button></p>
+        </div>
+        <div>
+        <h3>Craftbot-mini</h3>
+        <p><button><a href="">Info</a></button></p>
+        </div>
+    </div>
+  </div>  
+
+  <div class="item4">
+    <div class="flex-container_1">
+        <div>
+            <h3>Craftbot</h3>
+            <p style="padding-left: 19px;"><button><a href="file:///C:/Users/ida.svahn/Creative%20Cloud%20Files/Github/SSUF.html/SS2.html">Info</a></button></p>
+        </div>
+        <div>
+            <table class="center">
+                <tr>
+                    <th>1.</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Name</td>
+                </tr>
+            </table>
+            <button type="button" class="collapsible">...</button>
+            <div class="content">
+                <table class="center">
+                    <tr>
+                        <td>4.</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                    <td>7.</td>
+                    <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                    <td>4.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                <td>7.</td>
+                <td>Name</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <div class="item5">Footer</div>
 </div>
 
