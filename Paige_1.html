@@ -3,13 +3,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-/* Searching bar */
-* {box-sizing: border-box;}
-
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom right, #c3bcca9c, #423245a8);
 }
+
 .topnav {
   overflow: hidden;
   background-color: rgba(25, 26, 34, 0.918);
@@ -27,31 +25,6 @@ body {
 .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
-
-/*Responsiv*/
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-}
-
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-/* Columns and Rows */
-* {
-  box-sizing: border-box;
-}
-
-body {
-/*
-Text typen
-*/
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 
@@ -85,23 +58,7 @@ Skapar tre columner sida vid sida
   }
 }
 
-/* Style för cards, bilder och knapp */
-.card {
-  box-shadow: 5px 4px 5px 5px rgba(114, 109, 109, 0.329);
-  transition: 0.6s;
-  text-align: center;
-  border-radius: 5px 5px 5px 5px; /*Ger avrundade hörn*/
-  background-color: white;
-}
-
-.card:hover {
-/*
-Hur skuggan ändras när musen dras över ett card
-*/
-  box-shadow: 10px 8px 10px 10px rgba(114, 109, 109, 0.329);
-}
-
-.card button {
+button {
   border: solid;
   border-radius: 5px 5px 5px 5px; 
   outline: 3px;
@@ -114,23 +71,24 @@ Hur skuggan ändras när musen dras över ett card
   font-size: 20px;
 }
 
-.card button:hover {
+button:hover {
   opacity: 0.7;
 }
 
 /*
-Länken är texten "Info" och ska vara vit och inte vara understruken,
+Länken är texten "Add print" och ska vara vit och inte vara understruken,
 alltså inte se ut som en länk
 */
 a:link {
     color: white;
     text-decoration: none;
   }
-  a:visited {
-    color: white;
-    text-decoration: none;
-  }
+a:visited {
+  color: white;
+  text-decoration: none;
+}
   
+
 .responsive {
   width: 300px;
   height: 300px;
@@ -141,8 +99,8 @@ a:link {
 table, th, td {
   border: 2px solid black;
   text-align: left;
-  border-collapse: collapse;
   font-size: large;
+  background-color: whitesmoke;
 }
 
 table.center {
@@ -151,27 +109,64 @@ table.center {
   width: 100%;
 }
 
-.collapsible {
-  background-color: rgb(196, 190, 190);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  outline: none;
-  text-align: center;
-  font-size: x-large;
-}
 
-.active, .collapsible:hover {
-  background-color: rgba(156, 154, 154, 0.708);
-}
-
-.content {
-  display: none;
-  overflow: hidden;
-  background-color: white;
+h3 {
   text-align: left;
-  font-size: large;
+  padding-left: 10px;
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 450px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+.flex-container_1 {
+  display: flex;
+  flex-direction: row;
+}
+  
+.flex-container_1 > div {
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
 }
 
 </style>
@@ -179,132 +174,164 @@ table.center {
 
 <body>
 <div class="top">
-    <div class="topnav"> 
-        <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Navbar.html">First paige</a>
-        <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_2.html">Paige_2</a>
-        <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_3.html">Paige_3</a>
-    </div>
+  <div class="topnav"> 
+      <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Navbar.html">First paige</a>
+      <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_2.html">Paige_2</a>
+      <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_3.html">Paige_3</a>
+  </div>
 </div>  
-
-
+<hr>
 <div class="row"> 
-    <div class="column">
-      <div class="card">
-        <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
-    </div>
-   
-    <div class="column">
-      <div class="card">
-        <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+        <div class="flip-card-back">
+          <h3>
+            Name:
+          </h3>
+          <h3 style="padding-bottom: 10px">
+            Timer:
+          </h3> 
+        </div>
       </div>
     </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+  </div>
+   
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
+        <div class="flip-card-back">
+          <h3>
+            Name:
+          </h3>
+          <h3 style="padding-bottom: 10px">
+            Timer:
+          </h3> 
+        </div>
+      </div>
     </div>
   </div>
-      
-  <div class="row"> 
-    <div class="column">
-      <div class="card">
-        <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+  
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
+        <div class="flip-card-back">
+          <h3>
+            Name:
+          </h3>
+          <h3 style="padding-bottom: 10px">
+            Timer:
+          </h3> 
+        </div>
+      </div>
     </div>
-  
-    <div class="column">
-      <div class="card">
-        <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-       </div>
+  </div>
+</div>
+<hr>
+<div class="row"> 
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
+        </div>
+        <div class="flip-card-back">
+          <h3>
+            Name:
+          </h3>
+          <h3 style="padding-bottom: 10px">
+            Timer:
+          </h3> 
+        </div>
+      </div>
     </div>
+  </div>
   
-    <div class="column">
-        <table class="center">
-          <tr>
-              <th>1.</th>
-              <th>Name</th>
-          </tr>
-          <tr>
-              <td>2.</td>
-              <td>Name</td>
-          </tr>
-          <tr>
-              <td>3.</td>
-              <td>Name</td>
-          </tr>
-        </table>
-        <button type="button" class="collapsible">...</button>
-        <div class="content">
-          <table class="center">
-              <tr>
-                  <td>4.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                  <td>5.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                  <td>6.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-              <td>7.</td>
-              <td>Name</td>
-              </tr>
-              <tr>
-                  <td>8.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                  <td>9.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                  <td>10.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                <td>4.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-                <td>5.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-                <td>6.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
+        </div>
+        <div class="flip-card-back">
+          <h3>
+            Name:
+          </h3>
+          <h3 style="padding-bottom: 10px">
+            Timer:
+          </h3> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="flex-container_1">
+  <div>
+    <table class="center">
+      <tr>
+          <th>1.</th>
+          <th>Name</th>
+      </tr>
+      <tr>
+          <td>2.</td>
+          <td>Name</td>
+      </tr>
+      <tr>
+          <td>3.</td>
+          <td>Name</td>
+      </tr>
+      <tr>
+          <td>4.</td>
+          <td>Name</td>
+      </tr>
+      <tr>
+          <td>5.</td>
+          <td>Name</td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+      <table class="center">
+        <tr>
+            <td>6.</td>
+            <td>Name</td>
+        </tr>
+        <tr>
             <td>7.</td>
             <td>Name</td>
-            </tr>
-          </table>
-        </div>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>Name</td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>Name</td>
+        </tr>
+      </table>
   </div>
+</div>
+       
+        
+
   
-  
-  </body>
-  
-  <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
-      
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
-  </script>
-  
-  </html>
+</div> 
+</body>
+</html>
   

@@ -35,12 +35,10 @@ body {
   }
 }
 
-
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
 .item4 { grid-area: right; }
-.item5 { grid-area: footer; }
 
 .grid-container {
   display: grid;
@@ -48,8 +46,7 @@ body {
   'header header header header header header'
   'menu menu menu menu menu menu'
   'main main main main main main'
-  'right right right right right right'
-  'footer footer footer footer footer footer';
+  'right right right right right right';
   grid-gap: 10px;
   background-color: gray;
   padding: 10px;
@@ -59,7 +56,7 @@ body {
   background-color: whitesmoke;
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 /* 
@@ -92,7 +89,7 @@ table, th, td {
 border: 2px solid black;
 text-align: left;
 border-collapse: collapse;
-font-size: large;
+font-size: medium;
 }
 
 table.center {
@@ -109,7 +106,7 @@ padding: 10px;
 width: 100%;
 outline: none;
 text-align: center;
-font-size: x-large;
+font-size: large;
 }
 
 .active, .collapsible:hover {
@@ -133,7 +130,7 @@ margin-bottom: 15px;
 color: white;
 background-color: #000;
 text-align: center;
-width: 100%; /*95% av cardets bredd*/
+width: 90%; /*95% av cardets bredd*/
 font-size: 20px;
 }
 
@@ -153,6 +150,12 @@ a:visited {
     color: white;
     text-decoration: none;
 }
+
+.responsive {
+  width: 300px;
+  height: 300px;
+}
+
 </style>
 </head>
 <body>
@@ -171,106 +174,116 @@ a:visited {
 
   <div class="item2">
     <div class="flex-container_1">
-        <div>
-        <h3>Prusa_Nemy</h3>
-        <h5>Free to use</h5>
-        <p style="padding-left: 19px;"><button><a href="">Add print</a></button></p>
-        </div>
-        <div>
-        <h3>Prusa_Tomda</h3>
-        <p style="padding-left: 19px;"><button><a href="">Info</a></button></p>
-        </div>
+      <div>
+        <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+          <h3>Craftbot</h3>
+          <h4>Free to use</h4>
+          <p style="padding-left: 19px;"><button><a href="file:///C:/Users/ida.svahn/Creative%20Cloud%20Files/Github/SSUF.html/SS2.html">Add print</a></button></p>
+      </div>
+      <div>
+          <table class="center">
+              <tr>
+                  <th>1.</th>
+                  <th>Name</th>
+              </tr>
+              <tr>
+                  <td>2.</td>
+                  <td>Name</td>
+              </tr>
+              <tr>
+                  <td>3.</td>
+                  <td>Name</td>
+              </tr>
+          </table>
+          <button type="button" class="collapsible">...</button>
+          <div class="content">
+              <table class="center">
+                  <tr>
+                      <td>4.</td>
+                      <td>Name</td>
+                  </tr>
+                  <tr>
+                      <td>5.</td>
+                      <td>Name</td>
+                  </tr>
+                  <tr>
+                      <td>6.</td>
+                      <td>Name</td>
+                  </tr>
+                  <tr>
+                  <td>7.</td>
+                  <td>Name</td>
+                  </tr>
+                  <tr>
+                      <td>8.</td>
+                      <td>Name</td>
+                  </tr>
+                  <tr>
+                      <td>9.</td>
+                      <td>Name</td>
+                  </tr>
+                  <tr>
+                      <td>10.</td>
+                      <td>Name</td>
+                  </tr>
+                  <tr>
+                  <td>4.</td>
+                  <td>Name</td>
+              </tr>
+              <tr>
+                  <td>5.</td>
+                  <td>Name</td>
+              </tr>
+              <tr>
+                  <td>6.</td>
+                  <td>Name</td>
+              </tr>
+              <tr>
+              <td>7.</td>
+              <td>Name</td>
+              </tr>
+              </table>
+          </div>
+      </div>
     </div>
   </div>
 
   <div class="item3">
     <div class="flex-container_2">
         <div>
+        <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
         <h3>Craftbot-mini</h3>
-        <p><button><a href="">Info</a></button></p>
+        <h4>Free to use</h4>
+        <p><button><a href="">Add print</a></button></p>
         </div>
+
         <div>
+        <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
         <h3>Craftbot-mini</h3>
-        <p><button><a href="">Info</a></button></p>
+        <h4>Free to use</h4>
+        <p><button><a href="">Add print</a></button></p>
         </div>
     </div>
   </div>  
 
   <div class="item4">
     <div class="flex-container_1">
-        <div>
-            <h3>Craftbot</h3>
-            <p style="padding-left: 19px;"><button><a href="file:///C:/Users/ida.svahn/Creative%20Cloud%20Files/Github/SSUF.html/SS2.html">Info</a></button></p>
+      <div>
+        <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+        <h3>Prusa: Nemy</h3>
+        <h4>Free to use</h4>
+        <p style="padding-left: 19px;"><button><a href="">Add print</a></button></p>
         </div>
+
         <div>
-            <table class="center">
-                <tr>
-                    <th>1.</th>
-                    <th>Name</th>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>Name</td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>Name</td>
-                </tr>
-            </table>
-            <button type="button" class="collapsible">...</button>
-            <div class="content">
-                <table class="center">
-                    <tr>
-                        <td>4.</td>
-                        <td>Name</td>
-                    </tr>
-                    <tr>
-                        <td>5.</td>
-                        <td>Name</td>
-                    </tr>
-                    <tr>
-                        <td>6.</td>
-                        <td>Name</td>
-                    </tr>
-                    <tr>
-                    <td>7.</td>
-                    <td>Name</td>
-                    </tr>
-                    <tr>
-                        <td>8.</td>
-                        <td>Name</td>
-                    </tr>
-                    <tr>
-                        <td>9.</td>
-                        <td>Name</td>
-                    </tr>
-                    <tr>
-                        <td>10.</td>
-                        <td>Name</td>
-                    </tr>
-                    <tr>
-                    <td>4.</td>
-                    <td>Name</td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td>Name</td>
-                </tr>
-                <tr>
-                    <td>6.</td>
-                    <td>Name</td>
-                </tr>
-                <tr>
-                <td>7.</td>
-                <td>Name</td>
-                </tr>
-                </table>
-            </div>
+        <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+        <h3>Prusa: Tomda</h3>
+        <h4>Free to use</h4>
+        <p style="padding-left: 19px;"><button><a href="">Add print</a></button></p>
         </div>
     </div>
   </div>
 
-  <div class="item5">Footer</div>
 </div>
 
 </body>
