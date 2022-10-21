@@ -7,20 +7,20 @@
 body{
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(to bottom right, rgba(0, 0, 255, 0.749), rgba(255, 0, 0, 0.868));
+	background: linear-gradient(to bottom right, rgba(3, 3, 218, 0.749), rgba(116, 9, 9, 0.868));
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
+	font-family: Arial, Helvetica, sans-serif;
+  }
 
 .Container {
 	width: 70%;
-	height: 90%;
+	height: 85%;
 	background-color: #d4d4d4d7;
 	border-radius: 40px;
-	box-shadow: 0px 10px 20px #1687d933;  
+	box-shadow: 5px 10px 20px #000a117e;  
 }
 
 
@@ -34,37 +34,43 @@ body{
 }
 	
 .flex-container_1 > div {
-	width: 25%;
+	width: 30%;
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 	
 .flex-container_2 > div {
-	width: 25%;
+	width: 30%;
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
-h4{
-	text-align: left;
-}
-
-h3{
-	padding-left: 130PX;
-}
-
-h2{
-	padding-left: 130px;
-}
 
 .Printer{
-	height: 120px;
-	padding-left: 130px;
+	height: 150px;
 }
 
 
-.Underline {
-	text-decoration-line: underline;
+button {
+	border: solid;
+	border-radius: 5px 5px 5px 5px; 
+	outline: 5px;
+	padding: 10px;
+	margin-bottom: 15px;
+	color: black;
+	background-color: rgb(64, 59, 59);
+	text-align: center;
+	width: 90%; /*95% av cardets bredd*/
+	font-size: 15px;
+}
+	
+button:hover {
+	opacity: 0.7;
+}
+
+a{
+	text-decoration-line: none;
+	color: white;
 }
 
 </style>
@@ -73,94 +79,75 @@ h2{
 	<div class="flex-container_1">
 		<div>
 			<h2>
-				06:32
+				00:00
 			</h2>
-			<img src="PRUSA.jpg" alt="Prusa_Printer" class="Printer">
-			<h3 class="Underline">
-			Nemy is printing
-			</h3>
-	    </div>
-
-		<div>
-		</div>
-
-	    <div>
-			<img src="PRUSA.jpg" alt="Prusa_Printer" class="Printer" style="padding-top: 70px">
-			<h3 class="Underline">
-			Tomda
+			<img src="craftbot-mini.jpg" alt="Craftbot-mini" class="Printer">
+			<h3>
+			Eggward
 			</h3>
 		</div>
+
 		<div>
-			<h4 style="padding-top: 70px">
-			Name:
-			</h4>
-			<h4>
-			Time:
-		    </h4>
+			<h2>
+				00:00
+			</h2>
+			<img src="craftbot-mini.jpg" alt="Craftbot-mini" class="Printer">
+			<h3>
+			Mange den lille
+			</h3>
 		</div>
+		
+		<div>
+			<h2>
+				04:56
+			</h2>
+			<img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Craftbot" class="Printer">
+			<h3>
+			Pappa Niclas<br>is printing
+			</h3>
+		</div>
+
+		<div style="padding-top: 50px; text-align: left">
+			<h3>
+				Printer:____
+				<br>
+				Name:____
+				<br>
+				Time:____
+			</h3>
+			<button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html">Reload page</a></button>
+			<p>
+				Reload page when the information<br>
+				is filed out under chosen printer
+			</p>
+		</div>	
 	</div>
 
 	<div class="flex-container_2">
 		<div>
-			<img src="craftbot-mini.jpg" alt="Craftbot-mini" class="Printer">
-			<h3 class="Underline">
-			Eggward
+			<h2>
+				06:31
+			</h2>
+			<img src="PRUSA.jpg" alt="Prusa_Printer" class="Printer">
+			<h3>
+			Nemy<br>is printing
 			</h3>
-		</div>
-		<div>
-			<h4 style="padding-top: 70px">
-			Name: 
-			</h4>
-			<h4>
-			Time:
-		    </h4>
+	    </div>
+
+	    <div>
+			<h2>
+				05:42
+			</h2>
+			<img src="PRUSA.jpg" alt="Prusa_Printer" class="Printer">
+			<h3>
+			Tomda<br>is printing 
+			</h3>
 		</div>
 
-		<div>
-			<img src="craftbot-mini.jpg" alt="Craftbot-mini" class="Printer">
-			<h3 class="Underline">
-			Mange den lille
-			</h3>
-		</div>
-		<div>
-			<h4 style="padding-top: 70px">
-			Name:
-			</h4>
-			<h4>
-			Time:
-		    </h4>
-		</div>
-	</div>
-
-	<div class="flex-container_1">
-		<div>
-			<img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Craftbot" class="Printer">
-			<h3 class="Underline">
-			Pappa Niclas
-			</h3>
-		</div>
-		<div>
-			<h4 style="padding-top: 70px">
-			Name:
-			</h4>
-			<h4>
-			Time:
-		    </h4>
-		</div>
-		<div>
-			<p class="Underline">
-				Reload page
-			</p>
-			<p>
-				Reload page when you have filed out<br>
-				the information under shosen printer
-			</p>
-		</div>
+		<div></div>
 		
-		<div>
-			<p class="Underline">
-				Back to home page
-			</p>
+		<div style="padding-top: 200px; text-align: left">
+			<button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_2.html">Back to home page</a></button>
 		</div>
 	</div>
 </div>

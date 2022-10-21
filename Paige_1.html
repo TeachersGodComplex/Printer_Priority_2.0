@@ -5,7 +5,7 @@
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom right, #c3bcca9c, #423245a8);
+	background: linear-gradient(to bottom right, rgba(122, 122, 143, 0.749), rgba(66, 46, 75, 0.868));
 }
 
 .topnav {
@@ -58,22 +58,6 @@ Skapar tre columner sida vid sida
   }
 }
 
-button {
-  border: solid;
-  border-radius: 5px 5px 5px 5px; 
-  outline: 3px;
-  padding: 15px;
-  margin-bottom: 15px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  width: 95%; /*95% av cardets bredd*/
-  font-size: 20px;
-}
-
-button:hover {
-  opacity: 0.7;
-}
 
 /*
 Länken är texten "Add print" och ska vara vit och inte vara understruken,
@@ -100,19 +84,13 @@ table, th, td {
   border: 2px solid black;
   text-align: left;
   font-size: large;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 table.center {
   margin-left: 0; 
   margin-right: 0;
   width: 100%;
-}
-
-
-h3 {
-  text-align: left;
-  padding-left: 10px;
 }
 
 
@@ -152,8 +130,8 @@ h3 {
 }
 
 .flip-card-back {
-  background-color: black;
-  color: white;
+	background: linear-gradient(to bottom right, rgba(122, 122, 143, 0.991), rgb(127, 117, 133));
+  color: black;
   transform: rotateY(180deg);
 }
 
@@ -180,21 +158,27 @@ h3 {
   margin-bottom: 10px;
 }
 
-button {
+button{
   border: solid;
   border-radius: 5px 5px 5px 5px; 
   outline: 3px;
+  padding: 15px;
   margin-bottom: 5px;
-  color: white;
-  background-color: #000;
+  color: black;
+  background: linear-gradient(to bottom right, rgba(3, 3, 37, 0.749), rgba(234, 167, 240, 0.721));
   text-align: center;
-  width: 100%; 
+  width: 95%; 
   font-size: 20px;
 }
   
 button:hover {
   opacity: 0.7;
 }
+
+h2 {
+  text-align: center;
+}
+
 
 </style>
 </head>
@@ -215,13 +199,15 @@ button:hover {
           <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
         <div class="flip-card-back">
+          <h2>
+            Mange den lile
+          </h2>
           <h3>
-            Name:
-          </h3>
-          <h3 style="padding-bottom: 10px">
-            Timer:
+            Timer: 00:00
+            <br>
+            Name:____
           </h3> 
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -233,13 +219,15 @@ button:hover {
           <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
         <div class="flip-card-back">
+          <h2>
+            Eggward
+          </h2>
           <h3>
-            Name:
-          </h3>
-          <h3 style="padding-bottom: 10px">
-            Timer:
+            Timer: 00:00
+            <br>
+            Name:____
           </h3> 
-         </div>
+        </div>
       </div>
     </div>
   </div>
@@ -251,13 +239,15 @@ button:hover {
           <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
         <div class="flip-card-back">
+          <h2>
+            Niclas den store
+          </h2>
           <h3>
-            Name:
-          </h3>
-          <h3 style="padding-bottom: 10px">
-            Timer:
-          </h3> 
-         </div>
+            Timer: 00:00
+            <br>
+            Name:____
+          </h3>  
+        </div>
       </div>
     </div>
   </div>
@@ -271,11 +261,13 @@ button:hover {
           <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
         <div class="flip-card-back">
+          <h2>
+            Tomda
+          </h2>
           <h3>
-            Name:
-          </h3>
-          <h3 style="padding-bottom: 10px">
-            Timer:
+            Timer: 00:00
+            <br>
+            Name:___
           </h3>  
           </div>
       </div>
@@ -289,11 +281,13 @@ button:hover {
           <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 8px 8px;">
         </div>
         <div class="flip-card-back">
+          <h2>
+            Nemy
+          </h2>
           <h3>
-            Name:
-          </h3>
-          <h3 style="padding-bottom: 10px">
-            Timer:
+            Timer: 00:00
+            <br>
+            Name:____
           </h3> 
         </div>
       </div>
@@ -303,10 +297,10 @@ button:hover {
 
 <div class="flex-container_1">
   <div>
-    <button><a href="    ">Add name to Waitinglist</a></button>
+    <button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Waitinglist_1.html">Add name to Waitinglist</a></button>
   </div>
   <div>
-    <button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print.html">Add print</a></button>
+    <button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_1.html">Add print</a></button>
   </div>
   </div>
 <div class="flex-container_2">
@@ -330,7 +324,7 @@ button:hover {
       </tr>
       <tr>
           <td>5.</td>
-          <td>Name</td>
+          <td style="color: white">........................................</td>
       </tr>
     </table>
   </div>
@@ -355,7 +349,7 @@ button:hover {
         </tr>
         <tr>
             <td>10.</td>
-            <td>Name</td>
+            <td style="color: white">................................................</td>
         </tr>
       </table>
   </div>
