@@ -3,129 +3,65 @@
 <head>
 </head>
 <style>
-    /* Searching bar */
-* {box-sizing: border-box;}
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+table, th, td {
+  border: 2px solid black;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: large;
 }
 
-.Waitinglist { grid-area: waitinglist; }
-.Add_name { grid-area: add_name; }
-
-.Nr1 { grid-area: nr_1; 
-}
-.Nr2 { grid-area: nr_2; }
-.Nr3 { grid-area: nr_3; }
-.Nr4 { grid-area: nr_4; }
-.Nr5 { grid-area: nr_5; }
-.Nr6 { grid-area: nr_6; }
-.Nr7 { grid-area: nr_7; }
-.Nr8 { grid-area: nr_8; }
-.Nr9 { grid-area: nr_9; }
-.Nr10 { grid-area: nr_10; }
-
-.Name1 { grid-area: name_1; }
-.Name2 { grid-area: name_2; }
-.Name3 { grid-area: name_3; }
-.Name4 { grid-area: name_4; }
-.Name5 { grid-area: name_5; }
-.Name6 { grid-area: name_6; }
-.Name7 { grid-area: name_7; }
-.Name8 { grid-area: name_8; }
-.Name9 { grid-area: name_9; }
-.Name10 { grid-area: name_10; }
-
-.Info { grid-area: info; }
-.Reload { grid-area: reload; }
-.Back { grid-area: back; }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-  'waitinglist waitinglist waitinglist waitinglist waitinglist waitinglist add_name add_name'
-  'nr_1 name_1 name_1 nr_6 name_6 name_6 info info'
-  'nr_2 name_2 name_2 nr_7 name_7 name_7 info info'
-  'nr_3 name_3 name_3 nr_8 name_8 name_8 info info' 
-  'nr_4 name_4 name_4 nr_9 name_9 name_9 info info'
-  'nr_5 name_5 name_5 nr_10 name_10 name_10 reload back';
-  grid-gap: 8px;
-  background-color: rgba(47, 44, 44, 0.847);
-  padding: 5px;
-}
-
-.grid-container > div {
-  background-color: whitesmoke;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 20px;
+table.center {
+  margin-left: 0; 
+  margin-right: 0;
+  width: 100%;
 }
 
 </style>
 <body>
-<div class="grid-container">
-    <div class="Waitinglist">
-        <h2>
-        Waitinglist
-        </h2>
-    </div>
-    <div class="Add_name">
-        <h2>
-        Name:_______
-        </h2>
-    </div>
-
-    <div class="Info"></div>
-
-    <div class="Nr1">
-      <h3> 
-      1. 
-      </h3>
-    </div>
-    <div class="Name1">
-      <h3>
-      Name
-      </h3>
-    </div>
-    <div class="Nr6"> 6. </div>
-    <div class="Name6">Name Lastname</div>
-
-    <div class="Nr2"> 2. </div>
-    <div class="Name2">Name</div>
-    <div class="Nr7"> 7. </div>
-    <div class="Name7">Name Lastname</div>
-
-    <div class="Nr3"> 3. </div>
-    <div class="Name3">Name</div>
-    <div class="Nr8"> 8. </div>
-    <div class="Name8">Name lastname</div>
-
-    <div class="Nr4"> 4. </div>
-    <div class="Name4">Name</div>
-    <div class="Nr9"> 9. </div>
-    <div class="Name9">Name Lastname</div>
-
-    <div class="Info">
-        <p>
-        Max 10 markörer
-        <br>
-        <hr>
-        Namnet tas automatiskt bort från väntelistan<br>
-        då det skrivs in under en printer
-        </p>
-    </div>
-
-    <div class="Nr5"> 5. </div>
-    <div class="Name5">Name </div>
-    <div class="Nr10"> 10. </div>
-    <div class="Name10">...</div>
-
-    <div class="Reload">Reload page</div>
-    <div class="Back">
-      <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_1.html">Back to first page</a>
-    </div>
-
+<div>
+  <table class="center">
+    <tr>
+      <th>1.</th>
+      <th>Name</th>
+      <td>6.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Name</td>
+      <td>7.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>Name</td>
+      <td>8.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>Name</td>
+      <td>9.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>Name</td>
+      <td>10.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>.....</td>
+      <td>Name</td>
+      <td>.....</td>
+      <td>Name</td>
+    </tr>
+  </table>
 </div>
+
+<div class="Reload"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Waitinglist_1.html">Reload page</a></div>
+<div class="Back"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_1.html">Back to first page</a></div>
+
 </body>
 </html>
