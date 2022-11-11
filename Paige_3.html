@@ -43,10 +43,10 @@ table.center {
 }
 
 .collapsible {
-  background-color: rgb(196, 190, 190);
-  color: rgb(255, 255, 255);
+  background-color: whitesmoke;
+  color: black;
   cursor: pointer;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
   outline: none;
   text-align: center;
@@ -71,12 +71,60 @@ table.center {
 }
 
 
+.responsiv {
+  width: 280px;
+  height: 300px;
+}
+
+.flex-container_1 {
+  display: flex;
+  flex-direction: row;
+}
+  
+.flex-container_1 > div {
+  width: 25%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.flex-container_2 {
+  display: flex;
+  flex-direction: row;
+}
+  
+.flex-container_2 > div {
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.flex-container_3 {
+  display: flex;
+  flex-direction: row;
+}
+  
+.flex-container_3 > div {
+  width: 33%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h3{
+  margin-right: 70%;
+}
+
+  
+button:hover {
+  opacity: 0.7;
+}
+
 </style>
 </head>
 
 <body>
 <ul>
   <li><a href="#Waitinglist">Waitinglist</a></li>
+  <li><a href="#Add print">Add print</a></li>
   <li><a href="#Prusa">Prusa</a></li>
   <li><a href="#Craftbot-mini">Craftbot-mini</a></li>
   <li><a href="#Craftbot">Craftbot</a></li>
@@ -85,106 +133,200 @@ table.center {
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h1>Printer_Priority</h1>
+  <h1 style="margin-left:38%">Printer Priority</h1>
   <hr>
 
-  <h2 id="Waitinglist">Waitinglist</h2>
+  <h1 id="Waitinglist">Waitinglist</h1>
+  <div class="flex-container_1">
+    <div style="background-color: rgb(235, 139, 23); color: rgb(235, 139, 23)">-</div>
+    <div style="background-color: rgb(152, 146, 146); color: rgb(152, 146, 146)">-</div>
+    <div style="background-color: rgb(69, 153, 227); color: rgb(69, 153, 227)">-</div>
+    <div style="background-color: rgb(246, 250, 42); color: rgb(246, 250, 42) ">-</div>
+  </div>
   <table class="center">
     <tr>
-        <th>1.</th>
-        <th>Name</th>
+      <th>1.</th>
+      <th>Name</th>
+      <td>6.</td>
+      <td>Name</td>
     </tr>
     <tr>
-        <td>2.</td>
-        <td>Name</td>
+      <td>2.</td>
+      <td>Name</td>
+      <td>7.</td>
+      <td>Name</td>
     </tr>
     <tr>
-        <td>3.</td>
-        <td>Name</td>
+      <td>3.</td>
+      <td>Name</td>
+      <td>8.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>Name</td>
+      <td>9.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>Name</td>
+      <td>10.</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>.....</td>
+      <td>Name</td>
+      <td>.....</td>
+      <td>Name</td>
     </tr>
   </table>
-  <button type="button" class="collapsible">...</button>
-    <div class="content">
-        <table class="center">
-            <tr>
-                <td>4.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-                <td>5.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-                <td>6.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-            <td>7.</td>
-            <td>Name</td>
-            </tr>
-            <tr>
-                <td>8.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-                <td>9.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-                <td>10.</td>
-                <td>Name</td>
-            </tr>
-            <tr>
-            <td>4.</td>
-            <td>Name</td>
-        </tr>
-        <tr>
-            <td>5.</td>
-            <td>Name</td>
-        </tr>
-        <tr>
-            <td>6.</td>
-            <td>Name</td>
-        </tr>
-        <tr>
-        <td>7.</td>
-        <td>Name</td>
-        </tr>
-        </table>
+  <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Waitinglist_3.html"><button class="collapsible">Add name to Waitinglist</button></a>
+  
+  <h1 id="Add print">Add print</h1>
+    <div class="flex-container_1" style="font-size: 20px">
+      <div style="background-color: rgb(235, 139, 23)">Prusa</div>
+      <div style="background-color: rgb(152, 146, 146)">Craftbot-mini</div>
+      <div style="background-color: rgb(69, 153, 227)">Craftbot</div>
+      <div style="background-color: rgb(246, 250, 42)">Resin printer</div>
     </div>
+    <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_3.html"><button class="collapsible">Choose printer</button></a>
+  </div>
+</div>
+
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+  <div class="flex-container_2">
+    <div style="background-color: rgb(235, 139, 23); color: rgb(235, 139, 23)">-</div>
+    <div style="background-color: rgb(40, 39, 39); color: rgb(40, 39, 39)">-</div>
+  </div>
+
+  <h1 id="Prusa" style="margin-left: 40%">----- Prusa -----</h1>
+  <div class="flex-container_1">
+    <div style="background-color:rgb(235, 139, 23)">
+      <h2>
+      Tomda
+      </h2>
+      <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive">
+    </div>
+
+    <div style="background-color:rgb(40, 39, 39)">
+      <h3 style="color:white">
+      Name:
+      <br>
+      Timer:
+      </h3> 
+    </div>
+
+    <div style="background-color:rgb(236, 130, 16)">
+      <h2>
+      Nemy
+      </h2>
+      <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive">
+    </div>
+
+    <div style="background-color:rgb(40, 39, 39)">
+      <h3 style="color: white">
+      Name:
+      <br>
+      Timer:
+      </h3> 
+    </div>
+  </div>
 </div>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h2 id="Prusa">Prusa</h2>
-  <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-  <h3>
-  Tomda
-  </h3>
-  <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-  <h3>
-  Nemy
-  </h3>
+  <div class="flex-container_2">
+    <div style="background-color: rgb(152, 146, 146); color: rgb(152, 146, 146)">-</div>
+    <div style="background-color: rgb(211, 207, 207); color: rgb(211, 207, 207)">-</div>
+  </div>
+
+  <h1 id="Craftbot-mini" style="margin-left: 35%">----- Craftbot mini -----</h1>
+  <div class="flex-container_1">
+    <div style="background-color:rgb(152, 146, 146)">
+      <h2>
+      Mange den lille
+      </h2>
+      <img src="craftbot-mini.jpg" alt="Craftbot-mini" class="responsive">
+    </div>
+
+    <div style="background-color:rgb(211, 207, 207)">
+      <h3>
+      Name:
+      <br>
+      Timer:
+      </h3> 
+    </div>
+
+    <div style="background-color:rgb(152, 146, 146)">
+      <h2>
+      Eggward
+      </h2>
+      <img src="craftbot-mini.jpg" alt="Craftbot-mini" class="responsive">
+    </div>
+
+    <div style="background-color:rgb(211, 207, 207)">
+      <h3>
+      Name:
+      <br>
+      Timer:
+      </h3> 
+    </div>
+  </div>
 </div>
 
-<div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h2 id="Craftbot-mini">Craftbot-mini</h2>
-  <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-  <h3>
-  Mange den lille
-  </h3>
-  <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-  <h3>
-  Eggward
-  </h3>
-</div>
+
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h2 id="Craftbot">Craftbot</h2>
-  <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-  <h3>
-  Pappa Niclas
-  </h3>
+  <div class="flex-container_3" style="height: 25px">
+    <div style="background-color: rgb(69, 153, 227); color: rgb(69, 153, 227)">-</div>
+    <div style="background-color: rgb(72, 75, 78); color: rgb(72, 75, 78)">-</div>
+    <div style="background-color: rgb(246, 250, 42); color: rgb(246, 250, 42)">-</div>
+  </div>
+
+  <div class="flex-container_2">
+    <div>
+      <h1 id="Craftbot" style="margin-left: 2%">----- Craftbot -----</h1>
+    </div>
+
+    <div>
+        <h1>----- Anycubic -----</h1>
+    </div>
+  </div>
+
+  <div class="flex-container_1">
+    <div style="background: rgb(69, 153, 227)">
+      <h2 style="color:black">
+      Pappa Niclas
+      </h2>
+      <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="craftbot" class="responsiv">
+    </div>
+
+    <div style="background: rgba(72, 75, 78)">
+      <h3 style="margin-top: 4px; color: white">
+        Name:
+        <br>
+        Timer:
+        </h3>
+    </div>
+
+    <div style="background: rgb(246, 250, 42)">
+      <h2 style="color:black">
+      Blind juice
+      </h2>
+      <img src="anycubic.webp" alt="Resin skrivare" class="responsive">
+    </div>
+
+    <div style="background: rgba(72, 75, 78)">
+      <h3 style="margin-top: 4px; color: white">
+        Name:
+        <br>
+        Timer:
+        </h3>
+    </div>
+  </div>
 </div>
+
 </body>
 </html>
 

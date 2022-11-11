@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-    /* Searching bar */
-* {box-sizing: border-box;}
+</head>
 
+<style>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -36,106 +35,59 @@ body {
 }
 
 .item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
+.item2 { grid-area: prusa1; }
+.item3 { grid-area: prusa2; }
+.item4 { grid-area: list; }
+.item5 { grid-area: cb1; }
+.item6 { grid-area: cb2; }
+.item7 { grid-area: CB; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
   'header header header header header header'
-  'menu menu menu menu menu menu'
-  'main main main main main main'
-  'right right right right right right';
-  grid-gap: 10px;
-  background-color: gray;
+  'prusa1 prusa1 prusa2 prusa2 list list'
+  'cb1 cb1 cb2 cb2 CB CB';
+  grid-gap: 7px;
+  background-color: black;
   padding: 10px;
 }
 
 .grid-container > div {
-  background-color: whitesmoke;
+  background-color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px;
   font-size: 15px;
-}
-
-/* 
-För att della upp en grid "rad" i två skapar jag två containers bredvidvarandra 
-och sätter in bilder och text
-*/
-.flex-container_1 {
-display: flex;
-flex-direction: row;
-}
-.flex-container_2 {
-display: flex;
-flex-direction: row;
-}
-
-.flex-container_1 > div {
-width: 50%;
-text-align: center;
-margin-top: 10px;
-}
-
-.flex-container_2 > div {
-width: 50%;
-text-align: center;
-margin-bottom: 10px;
 }
 
 
 table, th, td {
-border: 2px solid black;
-text-align: left;
-border-collapse: collapse;
-font-size: medium;
+  border: 2px solid black;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: large;
 }
 
 table.center {
-margin-left: 0; 
-margin-right: 0;
-width: 100%;
-}
-
-.collapsible {
-background-color: rgb(196, 190, 190);
-color: rgb(255, 255, 255);
-cursor: pointer;
-padding: 10px;
-width: 100%;
-outline: none;
-text-align: center;
-font-size: large;
-}
-
-.active, .collapsible:hover {
-background-color: rgba(156, 154, 154, 0.708);
-}
-
-.content {
-display: none;
-overflow: hidden;
-background-color: white;
-text-align: left;
-font-size: large;
+  margin-right: 0;
+  width: 100%;
 }
 
 button {
-border: solid;
-border-radius: 5px 5px 5px 5px; 
-outline: 3px;
-padding: 15px;
-margin-bottom: 15px;
-color: white;
-background-color: #000;
-text-align: center;
-width: 90%; /*95% av cardets bredd*/
-font-size: 20px;
+  border: solid;
+  border-radius: 5px 5px 5px 5px; 
+  outline: 3px;
+  padding: 15px;
+  margin-bottom: 15px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
 }
 
 button:hover {
-opacity: 0.7;
+  opacity: 0.7;
 }
   
 /*
@@ -143,21 +95,21 @@ Länken är texten "Info" och ska vara vit och inte vara understruken,
 alltså inte se ut som en länk
 */
 a:link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 a:visited {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .responsive {
   width: 300px;
-  height: 300px;
+  height: 250px;
 }
 
 </style>
-</head>
+
 <body>
 <div class="top">
     <div class="topnav"> 
@@ -168,119 +120,103 @@ a:visited {
 
 <div class="grid-container">
   <div class="item1">
-    <h2>Printer_Priority</h2>
+    <h1>Printer_Priority</h1>
   </div>
 
   <div class="item2">
-    <div class="flex-container_1">
-      <div>
-        <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-          <h3>Craftbot</h3>
-          <h4>Free to use</h4>
-          <p style="padding-left: 19px;"><button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html">Add print</a></button></p>
-      </div>
-      <div>
-          <table class="center">
-              <tr>
-                  <th>1.</th>
-                  <th>Name</th>
-              </tr>
-              <tr>
-                  <td>2.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                  <td>3.</td>
-                  <td>Name</td>
-              </tr>
-          </table>
-          <button type="button" class="collapsible">...</button>
-          <div class="content">
-              <table class="center">
-                  <tr>
-                      <td>4.</td>
-                      <td>Name</td>
-                  </tr>
-                  <tr>
-                      <td>5.</td>
-                      <td>Name</td>
-                  </tr>
-                  <tr>
-                      <td>6.</td>
-                      <td>Name</td>
-                  </tr>
-                  <tr>
-                  <td>7.</td>
-                  <td>Name</td>
-                  </tr>
-                  <tr>
-                      <td>8.</td>
-                      <td>Name</td>
-                  </tr>
-                  <tr>
-                      <td>9.</td>
-                      <td>Name</td>
-                  </tr>
-                  <tr>
-                      <td>10.</td>
-                      <td>Name</td>
-                  </tr>
-                  <tr>
-                  <td>4.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                  <td>5.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-                  <td>6.</td>
-                  <td>Name</td>
-              </tr>
-              <tr>
-              <td>7.</td>
-              <td>Name</td>
-              </tr>
-              </table>
-          </div>
-      </div>
-    </div>
+    <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+    <h2>Nemy</h2>
+    <h4>
+      {Name} is printing<br>
+      Timer: 00:32
+    </h4>
+    <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html"><button>Add print</button></a>
   </div>
 
   <div class="item3">
-    <div class="flex-container_2">
-        <div>
-        <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-        <h3>Craftbot-mini</h3>
-        <h4>Free to use</h4>
-        <p><button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html">Add print</a></button></p>
-        </div>
-
-        <div>
-        <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-        <h3>Craftbot-mini</h3>
-        <h4>Free to use</h4>
-        <p><button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html">Add print</a></button></p>
-        </div>
-    </div>
-  </div>  
+    <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+    <h2>Tomda</h2>
+    <h4>
+      Free to use<br>
+      Timer: 00:00
+    </h4>
+    <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html"><button>Add print</button></a>
+  </div>
 
   <div class="item4">
-    <div class="flex-container_1">
-      <div>
-        <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-        <h3>Prusa: Nemy</h3>
-        <h4>Free to use</h4>
-        <p style="padding-left: 19px;"><button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html">Add print</a></button></p>
-        </div>
+    <table class="center">
+      <tr>
+          <th>1.</th>
+          <th>Name</th>
+      </tr>
+      <tr>
+          <td>2.</td>
+          <td>Name</td>
+      </tr>
+      <tr>
+          <td>3.</td>
+          <td>Name</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Name</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>Name</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>Name</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td>Name</td>
+      </tr>
+      <tr>
+        <td>8.</td>
+        <td>Name</td>
+      </tr>
+      <tr>
+        <td>9.</td>
+        <td>Name</td>
+      </tr>
+      <tr>
+        <td>10.</td>
+        <td>Name</td>
+      </tr>
+    </table>
+    <p style="padding-top: 107px"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Waitinglist_2.html"><button>Add name</button></a></p>
+  </div>
 
-        <div>
-        <img src="PRUSA.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
-        <h3>Prusa: Tomda</h3>
-        <h4>Free to use</h4>
-        <p style="padding-left: 19px;"><button><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html">Add print</a></button></p>
-        </div>
-    </div>
+  <div class="item5">
+    <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+    <h2>Mange den lile</h2>
+    <h4>
+      Free to use<br>
+      Timer: 00:00
+    </h4>
+    <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html"><button>Add print</button></a>
+  </div>
+
+  <div class="item6">
+    <img src="craftbot-mini.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+    <h2>Eggward</h2>
+    <h4>
+      Free to use<br>
+      Timer: 00:00
+    </h4>
+    <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html"><button>Add print</button></a>
+  </div>
+
+  <div class="item7">
+    <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Prusa_Printer" class="responsive" style="border-radius: 8px 8px 0 0;">
+    <h2>Niclas den store</h2>
+    <h4>
+      {Name} is printing<br>
+      Timer: 11:42
+    </h4>
+    <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_2.html"><button>Add print</button></a>
   </div>
 
 </div>
