@@ -57,14 +57,6 @@ table.center {
   background-color: rgba(156, 154, 154, 0.708);
 }
 
-.content {
-  display: none;
-  overflow: hidden;
-  background-color: white;
-  text-align: left;
-  font-size: large;
-}
-
 .responsive {
   width: 300px;
   height: 300px;
@@ -123,74 +115,38 @@ button:hover {
 
 <body>
 <ul>
-  <li><a href="#Waitinglist">Waitinglist</a></li>
-  <li><a href="#Add print">Add print</a></li>
+  <li><a href="#Waitinglist">Waitinglist / Add print</a></li>
   <li><a href="#Prusa">Prusa</a></li>
   <li><a href="#Craftbot-mini">Craftbot-mini</a></li>
-  <li><a href="#Craftbot">Craftbot</a></li>
-  <li><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_1.html" style="background-color: rgb(152, 146, 146); color: white;">Paige_1</a></li>
-  <li><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_2.html" style="background-color: rgb(152, 146, 146); color: white;">Paige_2</a></li>
+  <li><a href="#Craftbot">Craftbot / Resinskrivare</a></li>
+  <li><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_1.html" style="background-color: rgb(152, 146, 146); color: white;">Page_1</a></li>
+  <li><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Paige_2.html" style="background-color: rgb(152, 146, 146); color: white;">Page_2</a></li>
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
   <h1 style="margin-left:38%">Printer Priority</h1>
   <hr>
 
-  <h1 id="Waitinglist">Waitinglist</h1>
-  <div class="flex-container_1">
-    <div style="background-color: rgb(235, 139, 23); color: rgb(235, 139, 23)">-</div>
-    <div style="background-color: rgb(152, 146, 146); color: rgb(152, 146, 146)">-</div>
-    <div style="background-color: rgb(69, 153, 227); color: rgb(69, 153, 227)">-</div>
-    <div style="background-color: rgb(246, 250, 42); color: rgb(246, 250, 42) ">-</div>
-  </div>
-  <table class="center">
-    <tr>
-      <th>1.</th>
-      <th>Name</th>
-      <td>6.</td>
-      <td>Name</td>
-    </tr>
-    <tr>
-      <td>2.</td>
-      <td>Name</td>
-      <td>7.</td>
-      <td>Name</td>
-    </tr>
-    <tr>
-      <td>3.</td>
-      <td>Name</td>
-      <td>8.</td>
-      <td>Name</td>
-    </tr>
-    <tr>
-      <td>4.</td>
-      <td>Name</td>
-      <td>9.</td>
-      <td>Name</td>
-    </tr>
-    <tr>
-      <td>5.</td>
-      <td>Name</td>
-      <td>10.</td>
-      <td>Name</td>
-    </tr>
-    <tr>
-      <td>.....</td>
-      <td>Name</td>
-      <td>.....</td>
-      <td>Name</td>
-    </tr>
-  </table>
-  <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Waitinglist_3.html"><button class="collapsible">Add name to Waitinglist</button></a>
-  
-  <h1 id="Add print">Add print</h1>
-    <div class="flex-container_1" style="font-size: 20px">
-      <div style="background-color: rgb(235, 139, 23)">Prusa</div>
-      <div style="background-color: rgb(152, 146, 146)">Craftbot-mini</div>
-      <div style="background-color: rgb(69, 153, 227)">Craftbot</div>
-      <div style="background-color: rgb(246, 250, 42)">Resin printer</div>
+  <div class="flex-container_2">
+    <div>
+      <h1 id="Waitinglist">----- Waitinglist -----</h1>
     </div>
-    <a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_3.html"><button class="collapsible">Choose printer</button></a>
+  
+    <div>
+      <h1>----- Add print -----</h1>
+    </div>
+  </div>
+ 
+  <div class="flex-container_1" style="font-size: 20px">
+    <div style="background-color: rgb(235, 139, 23)">Prusa</div>
+    <div style="background-color: rgb(152, 146, 146)">Craftbot-mini</div>
+    <div style="background-color: rgb(69, 153, 227)">Craftbot</div>
+    <div style="background-color: rgb(246, 250, 42)">Resin printer</div>
+  </div>
+
+  <div class="flex-container_2">
+    <div><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Waitinglist_3.html"><button class="collapsible">Add name to Waitinglist</button></a></div>
+    <div><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_print_3.html"><button class="collapsible">Choose printer</button></a></div>
   </div>
 </div>
 
