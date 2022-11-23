@@ -1,0 +1,297 @@
+<html>
+<style>
+table, th, td {
+    border: 2px solid black;
+    text-align: left;
+    border-collapse: collapse;
+    font-size: large;
+}
+    
+table.center {
+    margin-left: 0; 
+    margin-right: 0;
+    width: 100%;
+}
+  
+.column {
+    float: left;
+    width: 16.5%;
+    padding: 10px 20px;
+}
+
+    .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+.column {
+    width: 100%;
+    height: 100%;
+    display: block;
+} }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+  
+
+.flex-container_2 {
+    display: flex;
+    flex-direction: row;
+}
+    
+.flex-container_2 > div {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+  
+.active, .collapsible:hover {
+    background-color: #555;
+}
+  
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+h3 {
+    text-align: center;
+}
+
+a {   
+	text-decoration-line: none;
+}
+
+</style>
+<body>
+
+<h1 style="text-align:center">Shoose your player</h1>
+<hr>
+<div class="row"> 
+    <div class="column">       
+        <div class="card">
+            <img src="PRUSA.jpg" alt="Prusa" style="width:100%">
+            <div class="container">
+            <h3 style="background-color:rgb(235, 139, 23)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_1.html">Tomda</a></h3> 
+            <p>            
+                {Name} is printing<br>
+                Timer: 00:32
+            </p> 
+            </div>
+        </div>
+    </div>
+
+
+    <div class="column">
+        <div class="card">
+            <img src="PRUSA.jpg" alt="Prusa" style="width:100%">
+            <div class="container">
+            <h3 style="background-color:rgb(235, 139, 23)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_2.html">Nemy</a></h3> 
+            <p>
+                Free to use<br>
+                Timer: 00:00
+            </p> 
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="anycubic.webp" alt="Resin" style="width:100%">
+            <div class="container">
+            <h3 style="background-color:rgb(246, 250, 42)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_3.html">Blind juice</a></h3> 
+            <p>
+                Free to use<br>
+                Timer: 00:00
+            </p> 
+            </div>
+        </div>
+    </div>
+
+    <div class="column">       
+        <div class="card">
+            <img src="craftbot-mini.jpg" alt="Craftbot-mini" style="width:100%">
+            <div class="container">
+            <h3 style="background-color:rgb(152, 146, 146)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_4.html">Eggward</a></h3> 
+            <p>
+                {Name} is printing<br>
+                Timer: 02:43
+            </p> 
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="craftbot-mini.jpg" alt="craftbot-mini" style="width:100%">
+            <div class="container">
+            <h3 style="background-color:rgb(152, 146, 146)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_5.html">Mange den lille</a></h3> 
+            <p>   
+                Free to use<br>
+                Timer: 00:00
+            </p> 
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Resin" style="width:100%">
+            <div class="container">
+            <h3 style="background-color:rgb(69, 153, 227)"><a href="">Pappa Niclas</a></h3> 
+            <p>
+                {Name} is printing<br>
+                Timer: 01:45
+            </p> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="flex-container_2">
+    <div>
+        <table class="center">
+        <thead>
+            <tr>
+                <td>1.</td>
+                <td>Name</td>
+                <td style="background-color: rgb(152, 146, 146)">Eggward</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Name</td>
+                <td style="background-color: rgb(152, 146, 146)">Mange den lille</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Name</td>
+                <td style="background-color: rgb(69, 153, 227)">Pappa Niclas</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Name</td>
+                <td style="background-color: rgb(246, 250, 42)">Blind juice</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Name</td>
+                <td style="background-color: rgb(235, 139, 23)">Tomda</td>
+            </tr>
+        </thead>
+        <tbody>
+            <td>6.</td>
+            <td>Name</td>
+            <td style="background-color: rgb(152, 146, 146)">Eggward</td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>Name</td>
+            <td style="background-color: rgb(152, 146, 146)">Mange den lille</td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Name</td>
+            <td style="background-color: rgb(69, 153, 227)">Pappa Niclas</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>Name</td>
+            <td style="background-color: rgb(246, 250, 42)">Blind juice</td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>Name</td>
+            <td style="background-color: rgb(235, 139, 23)">Tomda</td>
+        </tbody>
+        </table>
+        <a href="#" class="load_more">View More</a> 
+    </div>
+
+    <div>
+        <table class="center">
+        <tr>
+            <td>First in line:</td>
+            <td>People in line:</td>
+            <td>Printer:</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>2</td>
+            <td style="background-color: rgb(235, 139, 23)">Tomda</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>4</td>
+            <td style="background-color: rgb(235, 139, 23)">Nemy</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>3</td>
+            <td style="background-color: rgb(246, 250, 42)">Blind juice</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>5</td>
+            <td style="background-color: rgb(152, 146, 146)">Eggward</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>7</td>
+            <td style="background-color: rgb(152, 146, 146)">Mange den lille</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>8</td>
+            <td style="background-color: rgb(69, 153, 227)">Pappa Niclas</td>
+        </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    
+</body>
+</html>
