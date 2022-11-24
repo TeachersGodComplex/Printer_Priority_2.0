@@ -1,0 +1,145 @@
+<html>
+<style>
+
+.area2 { grid-area: printers; }
+.area3 { grid-area: lists; }
+    
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'printers printers printers printers printers'
+    'lists lists lists lists lists';
+    grid-gap: 4px;
+    background-color: black;
+    padding: 4px;
+}
+    
+.grid-container > div {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+.column {
+    width: 100%;
+    height: 100%;
+    display: block;
+} }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.flex-container_2 {
+    display: flex;
+    flex-direction: row;
+}
+    
+.flex-container_2 > div {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+</style>
+<body>
+    
+<div class="grid-container">
+    <div class="area2">
+        <div class="row"> 
+            <div class="column">       
+                <div class="card">
+                    <div class="flex-container_2">
+                        <div>
+                            <img src="PRUSA.jpg" alt="Prusa" style="width:100%">
+                            <div class="container">
+                            <h3 style="background-color:rgb(235, 139, 23)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_1.html">Tomda</a></h3> 
+                            <p>            
+                                {Name} is printing<br>
+                                Timer: 00:32
+                            </p> 
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="PRUSA.jpg" alt="Prusa" style="width:100%">
+                            <div class="container">
+                            <h3 style="background-color:rgb(235, 139, 23)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_2.html">Nemy</a></h3> 
+                            <p>
+                                Free to use<br>
+                                Timer: 00:00
+                            </p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+
+            <div class="column">       
+                <div class="card">
+                    <div class="flex-container_2">
+                        <div>
+                            <img src="anycubic.webp" alt="Resin" style="width:100%">
+                            <div class="container">
+                            <h3 style="background-color:rgb(246, 250, 42)"><a href="file:///C:/Users/ida.svahn/Documents/GitHub/Printer_Priority_2.0/Add_printer_3.html">Blind juice</a></h3> 
+                            <p>
+                                Free to use<br>
+                                Timer: 00:00
+                            </p> 
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Resin" style="width:100%">
+                            <div class="container">
+                            <h3 style="background-color:rgb(69, 153, 227)"><a href="file:///C:/Users/ida.svahn/Creative%20Cloud%20Files/Github/Printer_Priority_2.0/Add_printer_6.html">Pappa Niclas</a></h3> 
+                            <p>
+                                {Name} is printing<br>
+                                Timer: 01:45
+                            </p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

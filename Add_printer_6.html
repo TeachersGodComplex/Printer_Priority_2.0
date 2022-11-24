@@ -48,7 +48,7 @@ button {
 	padding: 10px;
 	margin-bottom: 15px;
 	color: black;
-	background-color: rgb(64, 59, 59);
+	background-color: rgba(69, 153, 227);
 	text-align: center;
 	width: 90%; /*95% av cardets bredd*/
 	font-size: 15px;
@@ -62,6 +62,39 @@ a{
 	text-decoration-line: none;
 	color: white;
 }
+
+img {
+    border-radius: 5px 5px 5px 5px;
+	width: 270px;
+}
+
+table, th, td {
+    border: 2px solid rgba(0, 0, 0, 0.649);
+    text-align: left;
+    border-collapse: collapse;
+    font-size: large;
+}
+
+td {
+    background-color: rgba(141, 140, 140, 0.171);
+    border-top: none;
+}
+
+table {
+    border-collapse:separate;
+    border:solid rgba(0, 0, 0, 0) 1px;
+    border-radius:6px;
+}
+
+td, th {
+    border-left:solid rgba(0, 0, 0, 0) 1px;
+    border-top:solid rgba(0, 0, 0, 0) 1px;
+}
+
+td:first-child, th:first-child {
+        border-left: none;
+}
+
 
 </style>
 <body>
@@ -80,18 +113,23 @@ a{
 			</h4>
 		</div>
 
-		<div style="padding-top: 50px; text-align: left">
-			<h3>
-				Name:____
-				<br>
-				Time:____
-			</h3>
+		<div style="padding-top: 60px; text-align: left">
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td style="color: rgba(103, 102, 102, 0)">....................................</td>
+					
+					<td>Time:</td>
+					<td style="color: rgba(103, 102, 102, 0)">....................................</td>
+				</tr>
+			</table>
+			
 			<button><a href="">I have speled checked</a></button>
 			<p>
-				Klick the button when the information is filed out.
-        You will automatically return to the first page and
-        there you will see your name under the<br> 
-        printer or if it's not free to use, in the waitinglist for that printer.
+			Klick the button when the information is filed out.
+			You will automatically return to the first page and
+			there you will see your name under the<br> 
+			printer or if it's not free to use, in the waitinglist under that printer.
 			</p>
 		</div>	
 	</div>
