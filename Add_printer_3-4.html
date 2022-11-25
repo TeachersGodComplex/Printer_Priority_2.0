@@ -7,7 +7,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(to bottom right, rgba(69, 153, 227), rgba(72, 75, 78));
+	background: linear-gradient(to bottom right, rgb(139, 137, 137), rgb(23, 23, 23));
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -20,21 +20,8 @@ body{
 	height: 85%;
 	background-color: #d4d4d4d7;
 	border-radius: 40px;
-	box-shadow: 5px 10px 20px #000a117e;  
+	box-shadow: 15px 15px 25px #000a1189;  
 }
-
-
-.flex-container_1 {
-	display: flex;
-	flex-direction: row;
-}
-	
-.flex-container_1 > div {
-	width: 50%;
-	text-align: center;
-	margin-top: 15px;
-}
-
 
 .Printer{
 	height: 250px;
@@ -46,12 +33,11 @@ button {
 	border-radius: 5px 5px 5px 5px; 
 	outline: 5px;
 	padding: 10px;
-	margin-bottom: 15px;
-	color: black;
-	background-color: rgba(69, 153, 227);
+	color: rgb(58, 57, 57);
+	background-color: rgb(80, 77, 77);
 	text-align: center;
-	width: 90%; /*95% av cardets bredd*/
-	font-size: 15px;
+	width: 80%;
+	font-size: 20px; 
 }
 	
 button:hover {
@@ -66,6 +52,8 @@ a{
 img {
     border-radius: 5px 5px 5px 5px;
 	width: 270px;
+	border: 2px solid black;
+	box-shadow: 5px 5px 15px #000a1165; 
 }
 
 table, th, td {
@@ -84,6 +72,8 @@ table {
     border-collapse:separate;
     border:solid rgba(0, 0, 0, 0) 1px;
     border-radius:6px;
+	margin-left: 135px;
+	margin-bottom: 20px;
 }
 
 td, th {
@@ -95,46 +85,70 @@ td:first-child, th:first-child {
         border-left: none;
 }
 
+.flex-container_2 {
+    display: flex;
+    flex-direction: row;
+}
+    
+.flex-container_2 > div {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 </style>
 <body>
 <div class="Container">
-	<div class="flex-container_1">
+	<div class="flex-container_2">
 		<div>
 			<h2>
-				01:45
+				02:43
 			</h2>
-			<img src="3D-printer-CraftUnique-CraftBot-3-front.jpg" alt="Craftbot" class="Printer">
+			<img src="craftbot-mini.jpg" alt="Craftbot" class="Printer">
 			<h3>
-			Pappa Niclas
+			Eggward
 			</h3>
 			<h4>
 			<p>{Name} is printing</p>
 			</h4>
 		</div>
+		
+		<div>
+			<h2>
+				00:00
+			</h2>
+			<img src="craftbot-mini.jpg" alt="Craftbot" class="Printer">
+			<h3>
+			Mange den lille
+			</h3>
+			<h4>
+			<p>Free to use</p>
+			</h4>
+		</div>
+	</div>
 
-		<div style="padding-top: 60px; text-align: left">
+	<div class="flex-container_2">
+		<div>
 			<table>
 				<tr>
+					<td>Printer:</td>
+					<td style="color: rgba(103, 102, 102, 0)">...............................</td>
+				</tr>
+				<tr>
 					<td>Name:</td>
-					<td style="color: rgba(103, 102, 102, 0)">....................................</td>
-					
+					<td style="color: rgba(103, 102, 102, 0)">...............................</td>
+				</tr>
+
+				<tr>
 					<td>Time:</td>
-					<td style="color: rgba(103, 102, 102, 0)">....................................</td>
+					<td style="color: rgba(103, 102, 102, 0)">...............................</td>
 				</tr>
 			</table>
-			
-			<button><a href="">I have speled checked</a></button>
-			<p>
-			Klick the button when the information is filed out.
-			You will automatically return to the first page and
-			there you will see your name under the<br> 
-			printer or if it's not free to use, in the waitinglist under that printer.
-			</p>
-		</div>	
-	</div>
+			<button style="width: 60%"><a href="file:///C:/Users/ida.svahn/Creative%20Cloud%20Files/Github/Printer_Priority_2.0/Add_printer_3-4.html">Save</a></button>
 		
-		<div style="padding-top: 100px; padding-left: 70px">
+		</div>
+
+		<div style="margin-top: 109px">
 			<button><a href="file:///C:/Users/ida.svahn/Creative%20Cloud%20Files/Github/Printer_Priority_2.0/Page_4.html">Back to home page</a></button>
 		</div>
 	</div>
